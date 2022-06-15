@@ -2,6 +2,7 @@ package coLaon.ClaonBack.user.domain;
 
 import coLaon.ClaonBack.common.domain.BaseEntity;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 

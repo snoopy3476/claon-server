@@ -1,6 +1,7 @@
 package coLaon.ClaonBack.user.web;
 
 import coLaon.ClaonBack.user.dto.DuplicatedCheckResponseDto;
+import coLaon.ClaonBack.user.dto.ResetPasswordRequestDto;
 import coLaon.ClaonBack.user.dto.SignUpRequestDto;
 import coLaon.ClaonBack.user.dto.UserResponseDto;
 import coLaon.ClaonBack.user.service.UserService;
@@ -32,5 +33,12 @@ public class AuthController {
     @ResponseStatus(value = HttpStatus.CREATED)
     public UserResponseDto signUp(@RequestBody @Valid SignUpRequestDto signUpRequestDto) {
         return this.userService.signUp(signUpRequestDto);
+    }
+
+    @PostMapping("/reset-password")
+    @ResponseStatus(value = HttpStatus.OK)
+    public void resetPassword(@RequestBody @Valid
+                             ResetPasswordRequestDto resetPasswordRequestDto) {
+        this.userService.resetPassword(resetPasswordRequestDto);
     }
 }
